@@ -101,7 +101,7 @@ export default function Product() {
               </a>
               <Link
                 href="/product"
-                className="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-[#1B5E20] ring-1 ring-[#1B5E20]/20 transition hover:bg-[#1B5E20]/5"
+                className="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-[#1B5E20] ring-1 ring-[#1B5E20]/20 transition hover:bg-[#1B5E20]/5 bg-white/85"
               >
                 Lihat Selengkapnya
               </Link>

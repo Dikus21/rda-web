@@ -18,9 +18,21 @@ export default function WhyUs() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 gap-5 md:grid-cols-3"
         >
-          <StatCard icon={<Leaf size={18} />} title="Ramah Lingkungan" desc="Teknologi kami mengurangi emisi dan memaksimalkan daur ulang." />
-          <StatCard icon={<Award size={18} />} title="Inovasi Teruji" desc="Sistem kami terus dikembangkan mengikuti perkembangan teknologi pengolahan limbah." />
-          <StatCard icon={<Shield size={18} />} title="Kinerja Andal" desc="Mesin kami dirancang untuk bekerja stabil dalam jangka panjang." />
+          <StatCard
+            icon={<Leaf size={18} />}
+            title="Ramah Lingkungan"
+            desc="Teknologi kami mengurangi emisi dan memaksimalkan daur ulang."
+          />
+          <StatCard
+            icon={<Award size={18} />}
+            title="Inovasi Teruji"
+            desc="Sistem kami terus dikembangkan mengikuti perkembangan teknologi pengolahan limbah."
+          />
+          <StatCard
+            icon={<Shield size={18} />}
+            title="Kinerja Andal"
+            desc="Mesin kami dirancang untuk bekerja stabil dalam jangka panjang."
+          />
         </motion.div>
       </div>
     </section>

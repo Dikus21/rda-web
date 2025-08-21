@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import LogoImg from "../elements/logo-img";
 
 export default function Footer() {
@@ -8,7 +7,7 @@ export default function Footer() {
     <footer className="mt-20 border-t border-border">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-muted sm:px-6 lg:flex-row lg:px-8">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-xl border border-border bg-card">
+          <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-xl">
             <LogoImg size={28} />
           </div>
           <span>
@@ -17,12 +16,8 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex items-center gap-4">
-          <Link href="#privacy" className="hover:opacity-90">
-            Kebijakan Privasi
-          </Link>
-          <Link href="#terms" className="hover:opacity-90">
-            Syarat & Ketentuan
-          </Link>
+          <div className="hover:opacity-90">Kebijakan Privasi</div>
+          <div className="hover:opacity-90">Syarat & Ketentuan</div>
         </div>
       </div>
     </footer>

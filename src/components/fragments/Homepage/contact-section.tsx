@@ -3,7 +3,7 @@
 import { Mail, MessageSquare } from "lucide-react";
 
 const WhatsAppLink =
-  "https://wa.me/6281380087575?text=Halo%20PT%20Rimbun%20Daur%20Alam%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20penawaran.";
+  "https://wa.me/6281380087575?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah";
 const EmailLink =
   "mailto:rimbundauralam@gmail.com?subject=Permintaan%20Katalog%20dan%20Penawaran&body=Halo%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20penawaran%20untuk%20produk%20Anda.";
 
