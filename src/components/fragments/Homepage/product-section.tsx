@@ -8,7 +8,7 @@ import Pill from "@/components/elements/pill";
 import LogoImg from "@/components/elements/logo-img";
 
 const WhatsAppLink =
-  "https://wa.me/6281380087575?text=Halo%20PT%20Rimbun%20Daur%20Alam%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20penawaran.";
+  "https://wa.me/6281380087575?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah";
 
 function FeatureItem({ title, desc }: { title: string; desc: string }) {
   return (
@@ -54,11 +54,11 @@ export default function Product() {
             transition={{ duration: 0.5 }}
             className="space-y-5"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex sm:flex-row flex-col items-center sm:gap-3 gap-5">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-card text-white">
                 <LogoImg size={40} src={"/logo-aureloop.svg"} />
               </div>
-              <div>
+              <div className="sm:text-start text-center">
                 <h3 className="text-2xl font-semibold text-text">
                   Aureloop — RDF Briket System
                 </h3>
@@ -90,18 +90,18 @@ export default function Product() {
               />
             </ul>
 
-            <div className="pt-4">
-              <a
+            <div className="pt-4 flex sm:flex-row flex-col gap-3 w-auto">
+              <Link
                 href={WhatsAppLink}
                 target="_blank"
                 rel="noreferrer"
-                className="mr-3 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white"
+                className="mr-3 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white w-fit"
               >
                 <MessageSquare size={16} /> Tanya Produk via WhatsApp
-              </a>
+              </Link>
               <Link
                 href="/product"
-                className="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-[#1B5E20] ring-1 ring-[#1B5E20]/20 transition hover:bg-[#1B5E20]/5 bg-white/85"
+                className="w-fit mr-3 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-[#1B5E20] ring-1 ring-[#1B5E20]/20 transition hover:bg-[#1B5E20]/5 bg-white/85"
               >
                 Lihat Selengkapnya
               </Link>

@@ -3,6 +3,7 @@
 import Pill from "@/components/elements/pill";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -25,12 +26,12 @@ export default function About() {
             menciptakan masa depan yang bersih dan berkelanjutan.
           </p>
           <div className="mt-6">
-            <a
+            <Link
               href="/about"
               className="inline-flex items-center rounded-xl bg-secondary px-5 py-3 text-sm font-semibold text-white"
             >
               Pelajari Selengkapnya
-            </a>
+            </Link>
           </div>
         </motion.div>
 
