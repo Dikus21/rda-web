@@ -308,6 +308,11 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.4.7.tgz#a7594ad61ecc88452d58b624500a30b340dd8528"
   integrity sha512-PrBIpO8oljZGTOe9HH0miix1w5MUiGJ/q83Jge03mHEE0E3pyqzAy2+l5G6aJDbXoobmxPJTVhbCuwlLtjSHwg==
 
+"@next/env@^15.5.0":
+  version "15.5.0"
+  resolved "https://registry.yarnpkg.com/@next/env/-/env-15.5.0.tgz#5d66f1bf61a7e041ed0cb870923dc041a9be507f"
+  integrity sha512-sDaprBAfzCQiOgo2pO+LhnV0Wt2wBgartjrr+dpcTORYVnnXD0gwhHhiiyIih9hQbq+JnbqH4odgcFWhqCGidw==
+
 "@next/eslint-plugin-next@15.4.7":
   version "15.4.7"
   resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-15.4.7.tgz#da2b93236c6c2c4b568bac4ccf12ab549da9d630"
@@ -2484,6 +2489,11 @@ regexp.prototype.flags@^1.5.3, regexp.prototype.flags@^1.5.4:
     gopd "^1.2.0"
     set-function-name "^2.0.2"
 
+resend@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/resend/-/resend-6.0.1.tgz#87c85ef346274a14008a4643bca5419dd9a631ce"
+  integrity sha512-xNZ0gKAOqQcH83lXsqNOwBbpKROnsZpQr9mXRdG6hrHTF9G9Il2pkoTRtq7rJzXMvCZX+I79oahsbSeaYOWRFA==
+
 resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
@@ -3041,3 +3051,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-4.1.3.tgz#0057bf53f570fbb49bf2a216c7a1d43fc282c4b3"
+  integrity sha512-1neef4bMce1hNTrxvHVKxWjKfGDn0oAli3Wy1Uwb7TRO1+wEwoZUZNP1NXIEESybOBiFnBOhI6a4m6tCLE8dog==
