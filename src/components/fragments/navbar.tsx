@@ -72,7 +72,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link
-            href="/quote"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-xl bg-accent1 px-4 py-2 text-sm font-semibold text-white"
           >
             <FileText size={16} /> Get a Quote
@@ -97,7 +97,7 @@ export default function Navbar() {
             <Link href="/product">Product</Link>
             <Link href="/contact">Contact</Link>
             <Link
-              href="/quote"
+              href="/contact"
               className="mt-2 inline-flex w-max items-center gap-2 rounded-xl bg-accent1 px-4 py-2 text-sm font-semibold text-white"
             >
               <FileText size={16} /> Get a Quote
