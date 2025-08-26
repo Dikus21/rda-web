@@ -6,10 +6,12 @@ export default function LogoImg({
   size = 32,
   src = "/logo-rda.svg",
   alt = "Logo PT Rimbun Daur Alam",
+  className,
 }: {
   size?: number;
   src?: string;
   alt?: string;
+  className?: string;
 }) {
   return (
     <Image
@@ -17,7 +19,7 @@ export default function LogoImg({
       alt={alt}
       width={size}
       height={0}
-      className="h-auto object-contain"
+      className={`h-auto object-contain ${className}`}
       priority
     />
   );

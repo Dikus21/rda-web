@@ -26,7 +26,7 @@ function CTAButtons() {
 export default function Hero() {
   return (
     <section id="home" className="relative">
-      <div className="relative flex min-h-[70vh] items-center md:min-h-[78vh]">
+      <div className="relative flex min-h-[100vh] items-center">
         <div className="absolute inset-0">
           <Image
             src="/hero-img.jpg"

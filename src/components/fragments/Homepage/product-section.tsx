@@ -6,9 +6,9 @@ import Link from "next/link";
 import { MessageSquare } from "lucide-react";
 import Pill from "@/components/elements/pill";
 import LogoImg from "@/components/elements/logo-img";
+import { data } from "@/data";
 
-const WhatsAppLink =
-  "https://wa.me/6281380087575?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah";
+const WhatsAppLink = `https://wa.me/${data.contact.phone}?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah`;
 
 function FeatureItem({ title, desc }: { title: string; desc: string }) {
   return (
@@ -115,13 +115,13 @@ export default function Product() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-card shadow-xl">
+            <div className="relative aspect-[16/9] rounded-3xl border border-border bg-card shadow-xl flex items-center">
               <Image
                 src="/full-line-assy.jpg"
                 alt="Waste sorting line dan sistem RDF briket"
-                fill
+                height={800}
+                width={800}
                 className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
             <div className="absolute -bottom-4 left-6">
