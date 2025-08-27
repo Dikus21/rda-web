@@ -38,7 +38,7 @@ export default function SelectionCard({
 
   // kelas dasar kartu (dipakai di kedua mode)
   const baseClass =
-    "block h-full rounded-2xl border border-border bg-card p-5 py-8 shadow-md " +
+    "block h-full rounded-2xl border border-border bg-card p-5 py-8 shadow-xs " +
     "flex flex-col items-center text-center gap-3 " +
     "transition-shadow";
 
