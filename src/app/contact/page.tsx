@@ -1,49 +1,221 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeUp, fade, stagger, VIEWPORT } from "@/lib/motion";
 import ContactForm from "@/components/fragments/Contact/contactForm";
+import SelectionCard from "@/components/fragments/Contact/selectionCard";
+import { data } from "@/data";
 import type { Metadata } from "next";
+import React from "react";
 
-const ORG = "PT Rimbun Daur Alam";
-const ADDRESS = "Kabupaten Tangerang, Indonesia";
+const SCHEDULE = process.env.NEXT_PUBLIC_SCHEDULE || "08.00–17.00 (Sen–Jum)";
 
-export const metadata: Metadata = {
-  title: `Hubungi Kami | ${ORG}`,
-  description:
-    "Hubungi PT Rimbun Daur Alam untuk konsultasi sistem pengolahan sampah terpadu dan solusi RDF briket.",
-  openGraph: {
-    title: `Hubungi Kami | ${ORG}`,
-    description:
-      "Konsultasikan kebutuhan pengolahan sampah: kapasitas, komposisi, output, dan timeline implementasi.",
-  },
-};
+// const metadata: Metadata = {
+//   title: `Hubungi Kami | ${data.company.name}`,
+//   description:
+//     "Hubungi PT Rimbun Daur Alam untuk konsultasi sistem pengolahan sampah terpadu dan solusi RDF briket.",
+//   openGraph: {
+//     title: `Hubungi Kami | ${data.company.name}`,
+//     description:
+//       "Konsultasikan kebutuhan pengolahan sampah: kapasitas, komposisi, output, dan timeline implementasi.",
+//   },
+// };
+
 export default function ContactPage() {
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "";
-  const contactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "rimbundauralam@gmail.com";
+  const telHref = data.contact.phone
+    ? `https://wa.me/${data.contact.phone}`
+    : undefined;
+  const mailHref = `mailto:${data.contact.email}`;
+  const mapHref = `https://maps.app.goo.gl/aqdm4cD6iQhSrc8g8`;
+
   return (
-    <main
-      className="min-h-screen"
-      style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}
-    >
-      <section className="mx-auto max-w-6xl px-4 pt-14 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Hubungi Kami
-          </h1>
-          <p
-            className="mx-auto mt-3 max-w-2xl text-base"
-            style={{ color: "var(--muted)" }}
+    <main className="flex flex-col items-center py-5">
+      {/* Bagian header + card kontak */}
+      <motion.section
+        aria-labelledby="contact-title"
+        className="flex flex-col items-center gap-3 max-w-6xl px-4 py-12 sm:px-6 lg:px-8"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={VIEWPORT}
+      >
+        <motion.h1
+          id="contact-title"
+          className="text-4xl font-bold text-text md:text-5xl"
+          variants={fadeUp}
+        >
+          <span>Hubungi </span>
+          <span className="text-primary">Kami</span>
+        </motion.h1>
+
+        <motion.p
+          className="mx-auto mt-3 max-w-2xl text-muted md:text-base text-center"
+          variants={fadeUp}
+        >
+          Tim kami siap membantu Anda dengan informasi, konsultasi, dan layanan
+          terbaik. Silakan hubungi kami melalui telepon, email, atau kunjungi
+          alamat kantor kami.
+        </motion.p>
+
+        <motion.div
+          className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 h-full"
+          variants={stagger}
+        >
+          {/* Phone */}
+          <motion.div variants={fadeUp}>
+            <SelectionCard
+              icon={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.77.54 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.11a2 2 0 0 1 2.11-.45c.84.24 1.71.42 2.61.54A2 2 0 0 1 22 16.92" />
+                </svg>
+              }
+              title="Phone"
+              line1={`+${data.contact.phone}`}
+              href={telHref}
+            />
+          </motion.div>
+
+          {/* Email */}
+          <motion.div variants={fadeUp}>
+            <SelectionCard
+              icon={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              }
+              title="Email"
+              line1={data.contact.email}
+              href={mailHref}
+            />
+          </motion.div>
+
+          {/* Schedule */}
+          <motion.div variants={fadeUp}>
+            <SelectionCard
+              icon={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12" />
+                  <polyline points="12 12 16 14" />
+                </svg>
+              }
+              title="Schedule"
+              line1={SCHEDULE}
+              line2="(WIB)"
+            />
+          </motion.div>
+
+          {/* Address */}
+          <motion.div variants={fadeUp}>
+            <SelectionCard
+              icon={
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              }
+              title="Address"
+              line1={data.company.name}
+              line2={data.contact.address}
+              href={mapHref}
+            />
+          </motion.div>
+        </motion.div>
+      </motion.section>
+
+      {/* Bagian form */}
+      <motion.section
+        className="mt-5 bg-accent1/10 py-16 px-10 rounded-3xl"
+        variants={fade}
+        initial="hidden"
+        whileInView="show"
+        viewport={VIEWPORT}
+      >
+        <div className="mx-auto max-w-6xl md:min-w-4xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={VIEWPORT}
           >
-            Sampaikan kebutuhan Anda—kami siap membantu dari studi awal hingga
-            implementasi on-site.
-          </p>
+            <motion.h2
+              className="text-3xl font-extrabold tracking-tight text-text md:text-4xl"
+              variants={fadeUp}
+            >
+              Hubungi Kami Secara Langsung
+            </motion.h2>
+            <motion.p
+              className="mx-auto mt-3 max-w-xl text-sm text-muted md:text-base"
+              variants={fadeUp}
+            >
+              Silakan isi formulir berikut. Tim kami akan menghubungi Anda
+              secepatnya.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="mx-auto mt-8 max-w-3xl"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={VIEWPORT}
+          >
+            <ContactForm
+              waNumber={data.contact.phone}
+              contactEmail={data.contact.email}
+            />
+          </motion.div>
         </div>
-        <ContactForm
-          org={ORG}
-          address={ADDRESS}
-          waNumber={waNumber}
-          contactEmail={contactEmail}
-        />
-        <div className="h-14" />
-      </section>
+      </motion.section>
     </main>
   );
 }
