@@ -7,6 +7,8 @@ import SelectionCard from "@/components/fragments/Contact/selectionCard";
 import { data } from "@/data";
 import type { Metadata } from "next";
 import React from "react";
+import Pill from "@/components/elements/pill";
+import Image from "next/image";
 
 const SCHEDULE = process.env.NEXT_PUBLIC_SCHEDULE || "08.00–17.00 (Sen–Jum)";
 
@@ -29,34 +31,74 @@ export default function ContactPage() {
   const mapHref = `https://maps.app.goo.gl/aqdm4cD6iQhSrc8g8`;
 
   return (
-    <main className="flex flex-col items-center py-5">
-      {/* Bagian header + card kontak */}
+    <main className="flex flex-col items-center">
+      <section className="relative w-full">
+        <div className="relative flex min-h-[50vh] items-center overflow-hidden">
+          <motion.div
+            aria-hidden
+            initial={{ scale: 1.02 }}
+            animate={{ scale: 1.06 }}
+            transition={{
+              duration: 12,
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              src="/contact-hero.jpg"
+              width={2000}
+              height={2000}
+              alt="Hero green energy"
+              className="h-full w-full object-cover"
+              priority
+            />
+          </motion.div>
+
+          <motion.div
+            className="absolute inset-0 bg-black/55"
+            variants={fade}
+            initial="hidden"
+            animate="show"
+          />
+
+          <div className="relative mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 lg:px-8">
+            <motion.div variants={fadeUp} initial="hidden" animate="show">
+              <Pill tone="accent1">Hubungi Kami</Pill>
+            </motion.div>
+
+            <motion.h1
+              className="mt-4 text-4xl font-bold tracking-tight text-white md:text-5xl"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              transition={{ delay: 0.08 }}
+            >
+              Kami siap menjawab pertanyaan Anda dengan solusi terbaik.
+            </motion.h1>
+
+            <motion.p
+              className="mx-auto mt-3 max-w-3xl text-white/90"
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              transition={{ delay: 0.16 }}
+            >
+              Dapatkan informasi, konsultasi, dan penawaran yang sesuai
+              kebutuhan Anda. Tim kami selalu siap membantu di setiap tahap.
+            </motion.p>
+          </div>
+        </div>
+      </section>
       <motion.section
         aria-labelledby="contact-title"
-        className="flex flex-col items-center gap-3 max-w-6xl px-4 py-12 sm:px-6 lg:px-8"
+        className="flex flex-col items-center gap-3 max-w-6xl px-4 py-8 sm:px-6 lg:px-8"
         variants={stagger}
         initial="hidden"
         whileInView="show"
         viewport={VIEWPORT}
       >
-        <motion.h1
-          id="contact-title"
-          className="text-4xl font-bold text-text md:text-5xl"
-          variants={fadeUp}
-        >
-          <span>Hubungi </span>
-          <span className="text-primary">Kami</span>
-        </motion.h1>
-
-        <motion.p
-          className="mx-auto mt-3 max-w-2xl text-muted md:text-base text-center"
-          variants={fadeUp}
-        >
-          Tim kami siap membantu Anda dengan informasi, konsultasi, dan layanan
-          terbaik. Silakan hubungi kami melalui telepon, email, atau kunjungi
-          alamat kantor kami.
-        </motion.p>
-
         <motion.div
           className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 h-full"
           variants={stagger}
