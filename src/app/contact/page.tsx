@@ -47,7 +47,7 @@ export default function ContactPage() {
             className="absolute inset-0"
           >
             <Image
-              src="/contact-hero.jpg"
+              src="/contact-hero-img.jpg"
               width={2000}
               height={2000}
               alt="Hero green energy"
