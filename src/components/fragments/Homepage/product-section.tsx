@@ -117,7 +117,7 @@ export default function Product() {
           >
             <div className="relative aspect-[16/9] rounded-3xl border border-border bg-card shadow-xl flex items-center">
               <Image
-                src="/full-line-assy.jpg"
+                src="/full-line-assy.png"
                 alt="Waste sorting line dan sistem RDF briket"
                 height={800}
                 width={800}
