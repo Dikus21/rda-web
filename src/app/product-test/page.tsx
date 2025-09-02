@@ -61,7 +61,8 @@ export default function ProductPage() {
             animate="show"
             transition={{ delay: 0.16 }}
           >
-            Solusi energi terbarukan dari timbunan sampah perkotaan.
+            Mewujudkan kota bersih melalui pemilahan cerdas dan pengolahan
+            berkelanjutan, menuju Zero Waste to Landfill.
           </motion.p>
         </div>
       </div>
