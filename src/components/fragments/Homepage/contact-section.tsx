@@ -6,7 +6,13 @@ import { Mail, MessageSquare } from "lucide-react";
 const WhatsAppLink = `https://wa.me/${data.contact.phone}?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah`;
 const EmailLink = `mailto:${data.contact.email}?subject=Permintaan%20Katalog%20dan%20Penawaran&body=Halo%2C%20saya%20ingin%20mendapatkan%20katalog%20dan%20penawaran%20untuk%20produk%20Anda.`;
 
-export default function Contact() {
+export default function Contact({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle: string;
+}) {
   return (
     <section id="contact" className="py-16 lg:py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -21,12 +27,9 @@ export default function Contact() {
           <div className="absolute -left-24 -bottom-24 h-64 w-64 rounded-full bg-accent2 opacity-20" />
           <div className="relative">
             <h3 className="text-2xl font-semibold tracking-tight md:text-3xl">
-              Dapatkan katalog & penawaran harga
+              {title}
             </h3>
-            <p className="mt-2 max-w-2xl text-white/90">
-              Hubungi kami via WhatsApp atau Email. Tim sales akan membantu
-              menyesuaikan solusi sesuai kebutuhan Anda.
-            </p>
+            <p className="mt-2 max-w-2xl text-white/90">{subtitle}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={WhatsAppLink}

@@ -14,7 +14,11 @@ export default function Page() {
       <About />
       <Product />
       <WhyUs />
-      <Contact />
+      <Contact
+        title="Dapatkan katalog & penawaran harga"
+        subtitle="Hubungi kami via WhatsApp atau Email. Tim sales akan membantu
+              menyesuaikan solusi sesuai kebutuhan Anda."
+      />
     </div>
   );
 }
