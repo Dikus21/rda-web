@@ -24,7 +24,6 @@ export default function ProductPage() {
           }),
         }}
       />
-
       <HeroSection />
       <ProblemSolutionSection />
       <WorkflowSection />
