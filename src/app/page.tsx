@@ -3,7 +3,7 @@ import WhyExist from "@/components/fragments/Homepage/why-exist-section";
 import About from "@/components/fragments/Homepage/about-section";
 import Product from "@/components/fragments/Homepage/product-section";
 import WhyUs from "@/components/fragments/Homepage/why-us-section";
-import Contact from "@/components/fragments/Homepage/contact-section";
+import Contact from "@/components/elements/contact-section";
 
 export default function Page() {
   // Server component by default; renders client sections inside (valid).
