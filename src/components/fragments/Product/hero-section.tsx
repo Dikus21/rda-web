@@ -30,12 +30,6 @@ export default function HeroSection() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <motion.div variants={stagger}>
-          {/* <motion.span
-            className="inline-block rounded-full px-3 py-1 text-sm ring-1 text-muted border-border"
-            variants={fadeUp}
-          >
-            Produk
-          </motion.span> */}
           <motion.div variants={fadeUp}>
             <Pill tone="accent1">Produk</Pill>
           </motion.div>
