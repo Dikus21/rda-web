@@ -5,7 +5,6 @@ import { fadeUp, fade, stagger, VIEWPORT } from "@/lib/motion";
 import ContactForm from "@/components/fragments/Contact/contactForm";
 import SelectionCard from "@/components/fragments/Contact/selectionCard";
 import { data } from "@/data";
-import type { Metadata } from "next";
 import React from "react";
 import Pill from "@/components/elements/pill";
 import Image from "next/image";
@@ -251,10 +250,7 @@ export default function ContactPage() {
             whileInView="show"
             viewport={VIEWPORT}
           >
-            <ContactForm
-              waNumber={data.contact.phone}
-              contactEmail={data.contact.email}
-            />
+            <ContactForm />
           </motion.div>
         </div>
       </motion.section>
