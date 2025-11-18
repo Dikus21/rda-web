@@ -12,9 +12,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PT Rimbun Daur Alam | Solusi Pengelolaan Sampah & Energi Terbarukan",
+  metadataBase: new URL("https://rimbun.co.id"),
+  title: {
+    default: "PT Rimbun Daur Alam",
+    template: "%s | PT Rimbun Daur Alam",
+  },
   description:
-    "PT Rimbun Daur Alam menghadirkan solusi berkelanjutan melalui mesin pengolahan sampah dan lampu jalan tenaga surya, mendukung ekonomi sirkular dan energi hijau.",
+    "PT Rimbun Daur Alam mengembangkan teknologi ramah lingkungan untuk pengolahan sampah dan energi terbarukan, termasuk sistem RDF briket Aureloop.",
+  openGraph: {
+    type: "website",
+    siteName: "PT Rimbun Daur Alam",
+    url: "https://rimbun.co.id",
+    title:
+      "PT Rimbun Daur Alam | Solusi Pengelolaan Sampah & Energi Terbarukan",
+    description:
+      "Solusi energi dan pengolahan limbah yang terintegrasi, dari pemilahan hingga RDF briket sebagai bahan bakar alternatif ramah lingkungan.",
+    images: ["/og/front-page.png"], // buat file ini nanti
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

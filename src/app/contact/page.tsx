@@ -8,6 +8,13 @@ import { data } from "@/data";
 import React from "react";
 import Pill from "@/components/elements/pill";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontak & Konsultasi",
+  description:
+    "Hubungi tim PT Rimbun Daur Alam untuk konsultasi solusi pengolahan sampah, RDF briket, dan energi terbarukan yang sesuai dengan kebutuhan Anda.",
+};
 
 const SCHEDULE = process.env.NEXT_PUBLIC_SCHEDULE || "08.00–17.00 (Sen–Jum)";
 

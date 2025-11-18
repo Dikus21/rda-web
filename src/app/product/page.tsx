@@ -6,6 +6,19 @@ import HeroSection from "@/components/fragments/Product/hero-section";
 import ProblemSolutionSection from "@/components/fragments/Product/problem-solution-section";
 import WorkflowSection from "@/components/fragments/Product/workflow-section";
 import SpecificationSection from "@/components/fragments/Product/specification-section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aureloop — RDF Briket System",
+  description:
+    "Aureloop adalah sistem RDF briket terintegrasi dari pemilahan, pencacahan, pengeringan hingga pembentukan briket sebagai bahan bakar alternatif pengganti batu bara.",
+  openGraph: {
+    title: "Aureloop — RDF Briket System | PT Rimbun Daur Alam",
+    description:
+      "Solusi lengkap pengolahan sampah menjadi RDF briket bernilai tinggi, siap diintegrasikan on-site di fasilitas industri dan PLTU.",
+    images: ["/og/aureloop-page.png"],
+  },
+};
 
 export default function ProductPage() {
   return (
