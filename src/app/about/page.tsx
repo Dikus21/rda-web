@@ -1,10 +1,10 @@
 import React from "react";
-import HeroSection from "@/components/fragments/about/hero-section";
-import VisionMisionSection from "@/components/fragments/about/vision-mision-section";
+import { Metadata } from "next";
+import LocationSection from "@/components/fragments/about/location-section";
 import StorySection from "@/components/fragments/about/story-section";
 import ValuesSection from "@/components/fragments/about/values-section";
-import LocationSection from "@/components/fragments/about/location-section";
-import { Metadata } from "next";
+import VisionMisionSection from "@/components/fragments/about/vision-mision-section";
+import HeroSection from "@/components/fragments/home/hero-section";
 
 export const metadata: Metadata = {
   title: "Tentang PT Rimbun Daur Alam",
