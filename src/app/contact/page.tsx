@@ -1,8 +1,8 @@
-import ContactForm from "@/components/fragments/contact/contact-form";
 import React from "react";
 import type { Metadata } from "next";
 import HeroSection from "@/components/fragments/contact/hero-section";
 import CardsSection from "@/components/fragments/contact/cards-section";
+import ContactForm from "@/components/fragments/contact/contact-form";
 
 export const metadata: Metadata = {
   title: "Kontak & Konsultasi",

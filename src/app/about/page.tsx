@@ -4,7 +4,7 @@ import LocationSection from "@/components/fragments/about/location-section";
 import StorySection from "@/components/fragments/about/story-section";
 import ValuesSection from "@/components/fragments/about/values-section";
 import VisionMisionSection from "@/components/fragments/about/vision-mision-section";
-import HeroSection from "@/components/fragments/home/hero-section";
+import HeroSection from "@/components/fragments/about/hero-section";
 
 export const metadata: Metadata = {
   title: "Tentang PT Rimbun Daur Alam",

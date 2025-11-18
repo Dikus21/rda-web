@@ -1,9 +1,9 @@
-import Hero from "@/components/fragments/home/hero-section";
-import WhyExist from "@/components/fragments/home/why-exist-section";
-import About from "@/components/fragments/home/about-section";
-import Product from "@/components/fragments/home/product-section";
-import WhyUs from "@/components/fragments/home/why-us-section";
 import Contact from "@/components/elements/contact-section";
+import About from "@/components/fragments/home/about-section";
+import Hero from "@/components/fragments/home/hero-section";
+import Product from "@/components/fragments/home/product-section";
+import WhyExist from "@/components/fragments/home/why-exist-section";
+import WhyUs from "@/components/fragments/home/why-us-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
