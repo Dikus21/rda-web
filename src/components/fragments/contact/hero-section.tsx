@@ -1,15 +1,14 @@
 "use client";
 import Pill from "@/components/elements/pill";
+import { fade, fadeUp } from "@/lib/motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeUp, fade } from "@/lib/motion";
 
-export default function HeroSection() {
+function HeroSection() {
   return (
-    <section className="relative">
+    <section className="relative w-full">
       <div className="relative flex min-h-[50vh] items-center overflow-hidden">
-        {/* Subtle Ken Burns bg (formal, pelan) */}
         <motion.div
           aria-hidden
           initial={{ scale: 1.02 }}
@@ -23,7 +22,7 @@ export default function HeroSection() {
           className="absolute inset-0"
         >
           <Image
-            src="/about-img.jpg"
+            src="/contact-hero-img.jpg"
             width={2000}
             height={2000}
             alt="Hero green energy"
@@ -41,7 +40,7 @@ export default function HeroSection() {
 
         <div className="relative mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 lg:px-8">
           <motion.div variants={fadeUp} initial="hidden" animate="show">
-            <Pill tone="accent1">Tentang Kami</Pill>
+            <Pill tone="accent1">Hubungi Kami</Pill>
           </motion.div>
 
           <motion.h1
@@ -51,7 +50,7 @@ export default function HeroSection() {
             animate="show"
             transition={{ delay: 0.08 }}
           >
-            Membawa Dampak Nyata Melalui Teknologi Ramah Lingkungan
+            Kami siap menjawab pertanyaan Anda dengan solusi terbaik.
           </motion.h1>
 
           <motion.p
@@ -61,11 +60,13 @@ export default function HeroSection() {
             animate="show"
             transition={{ delay: 0.16 }}
           >
-            Kenali tim, nilai, dan cara kerja kami dalam membangun solusi
-            pengelolaan limbah dan energi terbarukan.
+            Dapatkan informasi, konsultasi, dan penawaran yang sesuai kebutuhan
+            Anda. Tim kami selalu siap membantu di setiap tahap.
           </motion.p>
         </div>
       </div>
     </section>
   );
 }
+
+export default HeroSection;

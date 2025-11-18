@@ -1,8 +1,8 @@
-import Hero from "@/components/fragments/Homepage/hero-section";
-import WhyExist from "@/components/fragments/Homepage/why-exist-section";
-import About from "@/components/fragments/Homepage/about-section";
-import Product from "@/components/fragments/Homepage/product-section";
-import WhyUs from "@/components/fragments/Homepage/why-us-section";
+import Hero from "@/components/fragments/home/hero-section";
+import WhyExist from "@/components/fragments/home/why-exist-section";
+import About from "@/components/fragments/home/about-section";
+import Product from "@/components/fragments/home/product-section";
+import WhyUs from "@/components/fragments/home/why-us-section";
 import Contact from "@/components/elements/contact-section";
 import { Metadata } from "next";
 

@@ -1,3 +1,4 @@
+"use client";
 import Pill from "@/components/elements/pill";
 import { ArrowRight, PencilRuler, Rocket, Search } from "lucide-react";
 import React from "react";

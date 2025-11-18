@@ -1,3 +1,5 @@
+"use client";
+
 import { fade, fadeUp, stagger, VIEWPORT } from "@/lib/motion";
 import { motion } from "framer-motion";
 import React from "react";
