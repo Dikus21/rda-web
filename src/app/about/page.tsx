@@ -1,11 +1,11 @@
 "use client";
 
+import HeroSection from "@/components/fragments/about/hero-section";
+import LocationSection from "@/components/fragments/about/location-section";
+import StorySection from "@/components/fragments/about/story-section";
+import ValuesSection from "@/components/fragments/about/values-section";
+import VisionMisionSection from "@/components/fragments/about/vision-mision-section";
 import React from "react";
-import HeroSection from "@/components/fragments/About/hero-section";
-import VisionMisionSection from "@/components/fragments/About/vision-mision-section";
-import StorySection from "@/components/fragments/About/story-section";
-import ValuesSection from "@/components/fragments/About/values-section";
-import LocationSection from "@/components/fragments/About/location-section";
 
 const AboutUsPage: React.FC = () => {
   return (
