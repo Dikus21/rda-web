@@ -27,14 +27,18 @@ export default function ProductPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Aureloop — RDF Sorting System",
+            "@type": "Service",
+            name: "Aureloop — Waste Sorting System",
             url: `${publicURL}/product`,
-            logo: `${publicURL}/logo-rda.svg`,
-            category: "Waste Sorting Line System",
             description:
-              "Sistem pengolahan sampah terpadu menjadi RDF briket, dengan alur pemilahan, pencacahan, pengeringan, hingga pembentukan briket.",
-            brand: "Aureloop",
+              "Solusi sistem pengolahan sampah terpadu menjadi RDF briket untuk industri dan PLTU.",
+            provider: {
+              "@type": "Organization",
+              name: "PT Rimbun Daur Alam",
+              url: publicURL,
+              logo: `${publicURL}/logo-rda.svg`,
+            },
+            areaServed: "ID",
           }),
         }}
       />
