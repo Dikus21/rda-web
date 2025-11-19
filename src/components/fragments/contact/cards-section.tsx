@@ -3,17 +3,18 @@ import { data } from "@/data";
 import { motion } from "framer-motion";
 import React from "react";
 import SelectionCard from "./selection-card";
-import { VIEWPORT, fadeUp, stagger } from "@/lib/motion";
+import { fadeUp, stagger, VIEWPORT } from "@/lib/motion";
 
-function CardsSection() {
-  const SCHEDULE = process.env.NEXT_PUBLIC_SCHEDULE || "08.00–17.00 (Sen–Jum)";
-  const telHref = data.contact.phone
-    ? `https://wa.me/${data.contact.phone}`
-    : undefined;
-  const mailHref = `mailto:${data.contact.email}`;
-  const mapHref =
-    process.env.NEXT_PUBLIC_MAP_LINK ||
-    `https://maps.app.goo.gl/aqdm4cD6iQhSrc8g8`;
+const SCHEDULE = process.env.NEXT_PUBLIC_SCHEDULE || "08.00–17.00 (Sen–Jum)";
+const telHref = data.contact.phone
+  ? `https://wa.me/${data.contact.phone}`
+  : undefined;
+const mailHref = `mailto:${data.contact.email}`;
+const mapHref =
+  process.env.NEXT_PUBLIC_MAP_URL ||
+  `https://maps.app.goo.gl/aqdm4cD6iQhSrc8g8`;
+
+export default function ContactCardsSection() {
   return (
     <motion.section
       aria-labelledby="contact-title"
@@ -138,5 +139,3 @@ function CardsSection() {
     </motion.section>
   );
 }
-
-export default CardsSection;

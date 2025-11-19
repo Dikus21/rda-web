@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-function HeroSection() {
+export default function ContactHero() {
   return (
     <section className="relative w-full">
       <div className="relative flex min-h-[50vh] items-center overflow-hidden">
@@ -68,5 +68,3 @@ function HeroSection() {
     </section>
   );
 }
-
-export default HeroSection;

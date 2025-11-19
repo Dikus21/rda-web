@@ -1,8 +1,8 @@
+import ContactForm from "@/components/fragments/contact/contact-form-section";
 import React from "react";
+import ContactHero from "@/components/fragments/contact/hero-section";
+import ContactCardsSection from "@/components/fragments/contact/cards-section";
 import type { Metadata } from "next";
-import HeroSection from "@/components/fragments/contact/hero-section";
-import CardsSection from "@/components/fragments/contact/cards-section";
-import ContactForm from "@/components/fragments/contact/contact-form";
 
 export const metadata: Metadata = {
   title: "Kontak & Konsultasi",
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="flex flex-col items-center">
-      <HeroSection />
-      <CardsSection />
+      <ContactHero />
+      <ContactCardsSection />
       <ContactForm />
     </main>
   );

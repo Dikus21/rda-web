@@ -5,6 +5,7 @@ import ProblemSolutionSection from "@/components/fragments/product/problem-solut
 import WorkflowSection from "@/components/fragments/product/workflow-section";
 import SpecificationSection from "@/components/fragments/product/specification-section";
 import type { Metadata } from "next";
+<<<<<<< HEAD
 
 export const metadata: Metadata = {
   title: "Aureloop — RDF Briket System",
@@ -17,7 +18,22 @@ export const metadata: Metadata = {
     images: ["/og/aureloop-page.png"],
   },
 };
+=======
+>>>>>>> development
 
+export const metadata: Metadata = {
+  title: "Aureloop — RDF Briket System",
+  description:
+    "Aureloop adalah sistem RDF briket terintegrasi dari pemilahan, pencacahan, pengeringan hingga pembentukan briket sebagai bahan bakar alternatif pengganti batu bara.",
+  openGraph: {
+    title: "Aureloop — RDF Briket System | PT Rimbun Daur Alam",
+    description:
+      "Solusi lengkap pengolahan sampah menjadi RDF briket bernilai tinggi, siap diintegrasikan on-site di fasilitas industri dan PLTU.",
+    images: ["/og/aureloop.png"], // khusus produk
+  },
+};
+
+const publicURL = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
 export default function ProductPage() {
   return (
     <main className="min-h-dvh w-full bg-bg text-text">
@@ -27,11 +43,13 @@ export default function ProductPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: "Aureloop — RDF Briket System",
-            brand: { "@type": "Organization", name: "PT Rimbun Daur Alam" },
-            category: "RDF briquette system",
+            name: "Aureloop — RDF Sorting System",
+            url: `${publicURL}/product`,
+            logo: `${publicURL}/logo-rda.svg`,
+            category: "Waste Sorting Line System",
             description:
               "Sistem pengolahan sampah terpadu menjadi RDF briket, dengan alur pemilahan, pencacahan, pengeringan, hingga pembentukan briket.",
+            brand: "Aureloop",
           }),
         }}
       />
