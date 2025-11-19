@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import Contact from "@/components/elements/contact-section";
-import About from "@/components/fragments/home/about-section";
-import Hero from "@/components/fragments/home/hero-section";
-import Product from "@/components/fragments/home/product-section";
-import WhyExist from "@/components/fragments/home/why-exist-section";
-import WhyUs from "@/components/fragments/home/why-us-section";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Solusi Pengelolaan Sampah & Energi Terbarukan",
-  description:
-    "Solusi energi dan pengolahan limbah terintegrasi untuk pemerintah dan industri: dari pemilahan, pencacahan, pengeringan hingga RDF briket siap pakai.",
-};
-=======
 import Hero from "@/components/fragments/homepage/hero-section";
 import WhyExist from "@/components/fragments/homepage/why-exist-section";
 import About from "@/components/fragments/homepage/about-section";
@@ -20,7 +5,6 @@ import Product from "@/components/fragments/homepage/product-section";
 import WhyUs from "@/components/fragments/homepage/why-us-section";
 import Contact from "@/components/elements/contact-section";
 import type { Metadata } from "next";
->>>>>>> development
 
 export const metadata: Metadata = {
   title: "Solusi Pengelolaan Sampah & Energi Terbarukan",

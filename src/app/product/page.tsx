@@ -5,21 +5,6 @@ import ProblemSolutionSection from "@/components/fragments/product/problem-solut
 import WorkflowSection from "@/components/fragments/product/workflow-section";
 import SpecificationSection from "@/components/fragments/product/specification-section";
 import type { Metadata } from "next";
-<<<<<<< HEAD
-
-export const metadata: Metadata = {
-  title: "Aureloop — RDF Briket System",
-  description:
-    "Aureloop adalah sistem RDF briket terintegrasi dari pemilahan, pencacahan, pengeringan hingga pembentukan briket sebagai bahan bakar alternatif pengganti batu bara.",
-  openGraph: {
-    title: "Aureloop — RDF Briket System | PT Rimbun Daur Alam",
-    description:
-      "Solusi lengkap pengolahan sampah menjadi RDF briket bernilai tinggi, siap diintegrasikan on-site di fasilitas industri dan PLTU.",
-    images: ["/og/aureloop-page.png"],
-  },
-};
-=======
->>>>>>> development
 
 export const metadata: Metadata = {
   title: "Aureloop — RDF Briket System",

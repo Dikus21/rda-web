@@ -1,8 +1,4 @@
 "use client";
-<<<<<<< HEAD:src/components/fragments/Product/specification-section.tsx
-
-=======
->>>>>>> development:src/components/fragments/product/specification-section.tsx
 import { fade, fadeUp, stagger, VIEWPORT } from "@/lib/motion";
 import { motion } from "framer-motion";
 import React from "react";

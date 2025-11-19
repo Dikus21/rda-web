@@ -1,13 +1,7 @@
 import { MetadataRoute } from "next";
 
-<<<<<<< HEAD
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
-=======
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
 export default function sitemap(): MetadataRoute.Sitemap {
->>>>>>> development
   return [
     {
       url: `${baseUrl}/`,
