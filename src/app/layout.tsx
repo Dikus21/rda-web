@@ -4,7 +4,6 @@ import { Providers } from "./providers";
 import Navbar from "@/components/fragments/navbar";
 import Footer from "@/components/fragments/footer";
 import type { Metadata } from "next";
-import Jsonld from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rimbun.co.id"),
@@ -46,16 +45,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Jsonld
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "PT Rimbun Daur Alam",
-          url: "https://rimbun.co.id",
-          logo: "https://rimbun.co.id/logo.png",
-          description: "Teknologi pengolahan sampah dan energi terbarukan.",
-        }}
-      />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "PT Rimbun Daur Alam",
+              url: "https://rimbun.co.id",
+              logo: "https://rimbun.co.id/logo.png",
+              description: "Teknologi pengolahan sampah dan energi terbarukan.",
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

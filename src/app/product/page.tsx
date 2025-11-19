@@ -5,7 +5,6 @@ import ProblemSolutionSection from "@/components/fragments/product/problem-solut
 import WorkflowSection from "@/components/fragments/product/workflow-section";
 import SpecificationSection from "@/components/fragments/product/specification-section";
 import type { Metadata } from "next";
-import Jsonld from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Aureloop — RDF Briket System",
@@ -23,17 +22,20 @@ const publicURL = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
 export default function ProductPage() {
   return (
     <main className="min-h-dvh w-full bg-bg text-text">
-      <Jsonld
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: "Aureloop — RDF Sorting System",
-          url: `${publicURL}/product`,
-          logo: `${publicURL}/logo-rda.svg`,
-          category: "Waste Sorting Line System",
-          description:
-            "Sistem pengolahan sampah terpadu menjadi RDF briket, dengan alur pemilahan, pencacahan, pengeringan, hingga pembentukan briket.",
-          brand: "Aureloop",
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Aureloop — RDF Sorting System",
+            url: `${publicURL}/product`,
+            logo: `${publicURL}/logo-rda.svg`,
+            category: "Waste Sorting Line System",
+            description:
+              "Sistem pengolahan sampah terpadu menjadi RDF briket, dengan alur pemilahan, pencacahan, pengeringan, hingga pembentukan briket.",
+            brand: "Aureloop",
+          }),
         }}
       />
       <HeroSection />

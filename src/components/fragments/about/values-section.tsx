@@ -1,3 +1,4 @@
+"use client";
 import Pill from "@/components/elements/pill";
 import {
   Lightbulb,
