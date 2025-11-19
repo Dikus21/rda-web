@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, fade, stagger, VIEWPORT } from "@/lib/motion";
-import ContactForm from "@/components/fragments/Contact/contactForm";
-import SelectionCard from "@/components/fragments/Contact/selectionCard";
+import ContactForm from "@/components/fragments/contact/contactForm";
+import SelectionCard from "@/components/fragments/contact/selectionCard";
 import { data } from "@/data";
 import React from "react";
 import Pill from "@/components/elements/pill";

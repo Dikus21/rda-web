@@ -2,10 +2,10 @@
 
 import React from "react";
 import Contact from "@/components/elements/contact-section";
-import HeroSection from "@/components/fragments/Product/hero-section";
-import ProblemSolutionSection from "@/components/fragments/Product/problem-solution-section";
-import WorkflowSection from "@/components/fragments/Product/workflow-section";
-import SpecificationSection from "@/components/fragments/Product/specification-section";
+import HeroSection from "@/components/fragments/product/hero-section";
+import ProblemSolutionSection from "@/components/fragments/product/problem-solution-section";
+import WorkflowSection from "@/components/fragments/product/workflow-section";
+import SpecificationSection from "@/components/fragments/product/specification-section";
 
 export default function ProductPage() {
   return (

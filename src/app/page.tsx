@@ -1,8 +1,8 @@
-import Hero from "@/components/fragments/Homepage/hero-section";
-import WhyExist from "@/components/fragments/Homepage/why-exist-section";
-import About from "@/components/fragments/Homepage/about-section";
-import Product from "@/components/fragments/Homepage/product-section";
-import WhyUs from "@/components/fragments/Homepage/why-us-section";
+import Hero from "@/components/fragments/homepage/hero-section";
+import WhyExist from "@/components/fragments/homepage/why-exist-section";
+import About from "@/components/fragments/homepage/about-section";
+import Product from "@/components/fragments/homepage/product-section";
+import WhyUs from "@/components/fragments/homepage/why-us-section";
 import Contact from "@/components/elements/contact-section";
 
 export default function Page() {
