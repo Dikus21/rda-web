@@ -4,7 +4,13 @@ import About from "@/components/fragments/homepage/about-section";
 import Product from "@/components/fragments/homepage/product-section";
 import WhyUs from "@/components/fragments/homepage/why-us-section";
 import Contact from "@/components/elements/contact-section";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Solusi Pengelolaan Sampah & Energi Terbarukan",
+  description:
+    "Solusi energi dan pengolahan limbah terintegrasi untuk pemerintah dan industri: dari pemilahan, pencacahan, pengeringan hingga RDF briket siap pakai.",
+};
 export default function Page() {
   // Server component by default; renders client sections inside (valid).
   return (
