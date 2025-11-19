@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "PT Rimbun Daur Alam | Solusi Pengelolaan Sampah & Energi Terbarukan",
     description:
       "Solusi energi dan pengolahan limbah yang terintegrasi, dari pemilahan hingga RDF briket sebagai bahan bakar alternatif ramah lingkungan.",
-    images: ["/og/default-rimbun.png"], // buat file ini nanti
+    images: ["/og/front-page.png"],
   },
   twitter: {
     card: "summary_large_image",

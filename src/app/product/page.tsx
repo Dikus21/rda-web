@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Aureloop — RDF Briket System | PT Rimbun Daur Alam",
     description:
       "Solusi lengkap pengolahan sampah menjadi RDF briket bernilai tinggi, siap diintegrasikan on-site di fasilitas industri dan PLTU.",
-    images: ["/og/aureloop.png"], // khusus produk
+    images: ["/og/aureloop-page.png"],
   },
 };
 
