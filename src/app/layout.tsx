@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   },
   description:
     "PT Rimbun Daur Alam mengembangkan teknologi ramah lingkungan untuk pengolahan sampah dan energi terbarukan, termasuk sistem RDF briket Aureloop.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     siteName: "PT Rimbun Daur Alam",
