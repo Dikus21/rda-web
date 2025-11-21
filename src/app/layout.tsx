@@ -5,8 +5,10 @@ import Navbar from "@/components/fragments/navbar";
 import Footer from "@/components/fragments/footer";
 import type { Metadata } from "next";
 
+const baseURL = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rimbun.co.id"),
+  metadataBase: new URL(`${baseURL}`),
   title: {
     default: "PT Rimbun Daur Alam",
     template: "%s | PT Rimbun Daur Alam",
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "PT Rimbun Daur Alam",
-    url: "https://rimbun.co.id",
+    url: `${baseURL}`,
     title:
       "PT Rimbun Daur Alam | Solusi Pengelolaan Sampah & Energi Terbarukan",
     description:
@@ -40,7 +42,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export default function RootLayout({
   children,
 }: {
@@ -56,8 +57,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "PT Rimbun Daur Alam",
-              url: "https://rimbun.co.id",
-              logo: "https://rimbun.co.id/logo.png",
+              url: { baseURL },
+              logo: `${baseURL}/logo-rda.svg`,
               description: "Teknologi pengolahan sampah dan energi terbarukan.",
             }),
           }}

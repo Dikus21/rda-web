@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-const publicURL = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
+const baseURL = process.env.NEXT_PUBLIC_SITE_URL || "https://rimbun.co.id";
 export default function ProductPage() {
   return (
     <main className="min-h-dvh w-full bg-bg text-text">
@@ -28,15 +28,20 @@ export default function ProductPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Aureloop — Waste Sorting System",
-            url: `${publicURL}/product`,
+            name: "Aureloop — RDF Briket System",
+            url: `${baseURL}/product`,
             description:
               "Solusi sistem pengolahan sampah terpadu menjadi RDF briket untuk industri dan PLTU.",
+            brand: {
+              "@type": "Brand",
+              name: "Aureloop",
+              logo: `${baseURL}/brand/logo-aureloop.svg`,
+            },
             provider: {
               "@type": "Organization",
               name: "PT Rimbun Daur Alam",
-              url: publicURL,
-              logo: `${publicURL}/logo-rda.svg`,
+              url: baseURL,
+              logo: `${baseURL}/logo-rda.svg`,
             },
             areaServed: "ID",
           }),
