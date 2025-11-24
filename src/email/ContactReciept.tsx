@@ -8,7 +8,6 @@ import {
   Section,
   Text,
   Hr,
-  Img,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
 import { brand } from "./components/Brand";
