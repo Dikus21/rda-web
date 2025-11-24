@@ -50,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,7 +58,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "PT Rimbun Daur Alam",
-              url: { baseURL },
+              url: baseURL,
               logo: `${baseURL}/logo-rda.svg`,
               description: "Teknologi pengolahan sampah dan energi terbarukan.",
             }),
