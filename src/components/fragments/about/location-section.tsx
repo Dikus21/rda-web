@@ -40,7 +40,7 @@ export default function LocationSection() {
               src={`https://www.google.com/maps?q=${encodeURIComponent(
                 `${data.company.name} ${data.contact.address}`
               )}&output=embed`}
-              className="h-[320px] w-full"
+              className="h-80 w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
