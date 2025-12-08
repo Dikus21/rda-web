@@ -1,28 +1,15 @@
 import ContactReceipt from "@/email/ContactReciept";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { z } from "zod";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Validasi payload dari form
-const schema = z.object({
-  name: z.string().min(2, "Nama terlalu pendek"),
-  company: z.string().optional().default(""),
-  email: z.string().email("Email tidak valid"),
-  phone: z.string().min(6, "No. telepon tidak valid"),
-  subject: z.string().optional().default(""),
-  message: z.string().optional().default(""),
-  website: z.string().optional().default(""), // honeypot
-});
-
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const parsed = schema.parse(body || {});
+    const parsed = await req.json();
 
     // Honeypot — kalau diisi bot, pura-pura sukses
     if (parsed.website) {

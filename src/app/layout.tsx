@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "PT Rimbun Daur Alam mengembangkan teknologi ramah lingkungan untuk pengolahan sampah dan energi terbarukan, termasuk sistem RDF briket Aureloop.",
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     type: "website",
