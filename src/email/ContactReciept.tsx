@@ -8,6 +8,7 @@ import {
   Section,
   Text,
   Hr,
+  Img,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
 import { brand } from "./components/Brand";
@@ -27,6 +28,11 @@ type Props = {
   logoUrl?: string;
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? `${process.env.NEXT_PUBLIC_SITE_URL}`
+  : "https://rimbun.co.id";
+
+console.log(baseUrl);
 export default function ContactReceipt({
   name,
   topic,
@@ -45,18 +51,20 @@ export default function ContactReceipt({
         <Body className="bg-bg text-text">
           <Container className="mx-auto my-6 w-[600px] rounded-2xl bg-card p-8">
             {/* Logo header */}
-            <Section className="mb-5 text-center">
-              {/* <Img
-                src="/hero-img.jpg"
+            <Section className="flex justify-center">
+              <Img
+                src={`${baseUrl}/logo-rda.png`}
                 alt={`${org} logo`}
-                width="140"
-                style={{ margin: "0 auto", display: "block" }}
-              /> */}
+                width="50"
+                height="60"
+              />
             </Section>
 
             {/* Main message (exact wording requested) */}
             <Section className="leading-7">
-              <Text className="text-base">Hello {name || "Customer"},</Text>
+              <Text className="text-base">
+                Hello <b>{name || "Customer"}</b>,
+              </Text>
 
               <Text className="text-base">
                 Terima kasih telah menghubungi kami. Kami menghargai
