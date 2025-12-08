@@ -51,12 +51,13 @@ export default function ContactReceipt({
         <Body className="bg-bg text-text">
           <Container className="mx-auto my-6 w-[600px] rounded-2xl bg-card p-8">
             {/* Logo header */}
-            <Section className="flex justify-center">
+            <Section>
               <Img
                 src={`${baseUrl}/logo-rda.png`}
                 alt={`${org} logo`}
                 width="50"
-                height="60"
+                height="50"
+                className="mx-auto"
               />
             </Section>
 
@@ -81,12 +82,12 @@ export default function ContactReceipt({
               </Text>
 
               <Text className="mt-4 text-base">
-                Kami akan menghubungi Anda sesegera mungkin. Jika membutuhkan
-                bantuan segera atau ada pertanyaan lain, silakan hubungi kami di{" "}
+                Kami akan menghubungi Anda segera mungkin, Terimakasih.
+                {/* Jika membutuhkan bantuan segera atau ada pertanyaan lain, silakan hubungi kami di{" "}
                 <a href="https://wa.me/${data.contact.phone}?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah">
                   <b>{supportPhone ?? "+62-812-3456-7890"}</b>
                 </a>
-                .
+                . */}
               </Text>
 
               <Text className="mt-4 text-base">
