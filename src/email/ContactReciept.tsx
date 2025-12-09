@@ -32,7 +32,6 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? `${process.env.NEXT_PUBLIC_SITE_URL}`
   : "https://rimbun.co.id";
 
-console.log(baseUrl);
 export default function ContactReceipt({
   name,
   topic,
@@ -41,17 +40,40 @@ export default function ContactReceipt({
 }: Props) {
   const org = orgName ?? brand.org;
   const supportPhone = phone ?? brand.phone;
+  const displayName = name ? name.toUpperCase() : "CUSTOMER";
+
+  const previewText = `Halo ${displayName}, terima kasih telah menghubungi ${org}. Kami telah menerima permintaan Anda${topic ? ` untuk ${topic}` : ""} dan akan segera menghubungi Anda kembali.`;
 
   return (
     <Html>
       <Head />
-      <Preview>We’ve received your request — {org}</Preview>
+      <Preview>{previewText}</Preview>
 
       <Tailwind config={{ theme: { extend: { colors: { ...brand.colors } } } }}>
         <Body className="bg-bg text-text">
+          {/* Hidden preheader untuk Gmail - mencegah collapse */}
+          <div
+            style={
+              {
+                display: "none",
+                fontSize: "1px",
+                color: "#ffffff",
+                lineHeight: "1px",
+                maxHeight: "0px",
+                maxWidth: "0px",
+                opacity: 0,
+                overflow: "hidden",
+                msoHide: "all",
+              } as React.CSSProperties
+            }
+          >
+            {previewText}
+            {"\u00A0\u200C\u200B".repeat(80)}
+          </div>
+
           <Container className="mx-auto my-6 w-[600px] rounded-2xl bg-card p-8">
             {/* Logo header */}
-            <Section>
+            <Section className="text-center">
               <Img
                 src={`${baseUrl}/logo-rda.png`}
                 alt={`${org} logo`}
@@ -61,10 +83,10 @@ export default function ContactReceipt({
               />
             </Section>
 
-            {/* Main message (exact wording requested) */}
+            {/* Main message */}
             <Section className="leading-7">
               <Text className="text-base">
-                Hello <b>{name || "Customer"}</b>,
+                Hello <b>{displayName}</b>,
               </Text>
 
               <Text className="text-base">
@@ -83,11 +105,6 @@ export default function ContactReceipt({
 
               <Text className="mt-4 text-base">
                 Kami akan menghubungi Anda segera mungkin, Terimakasih.
-                {/* Jika membutuhkan bantuan segera atau ada pertanyaan lain, silakan hubungi kami di{" "}
-                <a href="https://wa.me/${data.contact.phone}?text=Halo%20saya%20tertarik%20dan%20ingin%20mendapatkan%20penawaran%20untuk%20mesin%20pengolahan%20sampah">
-                  <b>{supportPhone ?? "+62-812-3456-7890"}</b>
-                </a>
-                . */}
               </Text>
 
               <Text className="mt-4 text-base">
@@ -99,7 +116,7 @@ export default function ContactReceipt({
 
             <Hr className="my-6 border-border" />
 
-            {/* Footer (optional; bisa dihapus kalau mau super-minimal) */}
+            {/* Footer */}
             <Section>
               <Text className="m-0 text-xs text-muted">
                 {org} • {brand.address}
