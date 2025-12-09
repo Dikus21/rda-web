@@ -60,7 +60,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "PT Rimbun Daur Alam",
               url: baseURL,
-              logo: `${baseURL}/logo-rda.svg`,
+              logo: `${baseURL}/logo-rda.png`,
               description: "Teknologi pengolahan sampah dan energi terbarukan.",
             }),
           }}
